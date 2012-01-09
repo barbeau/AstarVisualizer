@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network2" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="H">
+			<state id="h1" />
+			<state id="h2" />
+			<state id="h3" />
+			<state id="h4" />
+			<probabilities>0.09900000000000001 0.008999999999999999 0.001 0.891</probabilities>
+		</cpt>
+		<cpt id="E1">
+			<state id="Off" />
+			<state id="Low" />
+			<state id="High" />
+			<parents>H</parents>
+			<probabilities>0.5 0.4 0.1 0.06 0.5 0.44 0.5 0.1 0.4 1 0 0</probabilities>
+		</cpt>
+		<cpt id="E2">
+			<state id="Off" />
+			<state id="Low" />
+			<state id="High" />
+			<parents>H</parents>
+			<probabilities>0.8 0.1 0.1 0.8 0.1 0.1 0.1 0.1 0.8 0.9 0.05 0.05</probabilities>
+		</cpt>
+		<cpt id="E3">
+			<state id="Off" />
+			<state id="On" />
+			<parents>H</parents>
+			<probabilities>0.1 0.9 0.9 0.1 0.9 0.1 1 0</probabilities>
+		</cpt>
+		<cpt id="E4">
+			<state id="Off" />
+			<state id="On" />
+			<parents>E1</parents>
+			<probabilities>0.9 0.1 0.2 0.8 0.1 0.9</probabilities>
+		</cpt>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.0.3887.0" name="Sean&apos;s Network" faultnameformat="nodestate">
+			<node id="H">
+				<name>H</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>183 99 224 127</position>
+			</node>
+			<node id="E1">
+				<name>E1</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>114 161 168 187</position>
+			</node>
+			<node id="E2">
+				<name>E2</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>205 172 268 200</position>
+			</node>
+			<node id="E3">
+				<name>E3</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>298 172 346 198</position>
+			</node>
+			<node id="E4">
+				<name>E4</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>78 225 133 251</position>
+			</node>
+		</genie>
+	</extensions>
+</smile>
