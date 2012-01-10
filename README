@@ -2,14 +2,18 @@
 * A* algorithm implementation *
 *******************************
 
-Created by Sean J. Barbeau 9/1/2005-11/1/2005
+Created by Sean J. Barbeau, 2005
+
+This project is an implementation and visualization of network algorithms such as the A* (i.e., A star) search algorithm.
+
+Currently, only A* search is fully implemented.  A Bayesian network is partially implemented.
 
 This application was created in the NetBeans IDE 4.1 w/ the JDK 1.5.0_04 and is editable in that environment
 by opening this root directory in NetBeans.
 
-The executable is "\dist\Astar.jar", and is launched in Windows by double-clicking on it from a normal window.  To be safe you may want to copy the entire root and subdirectories to your hard drive and then execute it.
+The executable is "\dist\NetworkAlgorithms.jar", and is launched in Windows by double-clicking on it from a normal window.  To be safe you may want to copy the entire root and subdirectories to your hard drive and then execute it.
 
-The source code is in "\src\astar".
+The source code is in "\src\" sub folders.
 
 Both input files should be located in the same directory as the .jar file to load from their default location, although the file browser buttons
 can be used to specify files in other locations.
