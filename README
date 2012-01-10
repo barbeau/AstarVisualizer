@@ -19,6 +19,8 @@ Both input files should be located in the same directory as the .jar file to loa
 can be used to specify files in other locations.
 
 Program execution:
+Setup - To execute Astar algorithm, choose the Astar configuration in Netbeans near compile buttons at top of screen.
+
 1)  Start application
 2)  Click on "Load files"
 3)  Select Start and Goal nodes and select heuristic
