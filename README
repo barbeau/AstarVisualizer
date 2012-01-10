@@ -28,8 +28,8 @@ Setup - To execute Astar algorithm, choose the Astar configuration in Netbeans n
 5)  User can move nodes by selecting the 'Move Node' radio button option and clicking and dragging a node around the map.
 6)  User can select to either progress step-by-step through the algorithm or immediately finish the algorithm by toggling the "Step-by-Step" button.
 7)  User can select the length of the step time from .1 to 10 seconds by moving the "Step time" slider.
-6)  Click "Start" to begin algorithm execution.  6) and 7) can also be performed during execution of the algorithm.
-7)  After algorithm finishes (or during execution if desired) click "Reset" to reset the algorithm to its initial state.  You can either run the algorithm again or load a new set of files.
+8)  Click "Start" to begin algorithm execution.  6) and 7) can also be performed during execution of the algorithm.
+9)  After algorithm finishes (or during execution if desired) click "Reset" to reset the algorithm to its initial state.  You can either run the algorithm again or load a new set of files.
 
 The output from the algorithm (path from start to goal node) should be shown in the "A* Log" text box within the application window as well as the graphical display.
 Start and goal nodes are shown in blue, current node being processed is in green, and any disabled nodes are red.
