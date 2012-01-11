@@ -48,7 +48,7 @@ public class HeuristicsNode extends NodeXY {
      * @return actual cost from this node to node_B
      */
     @Override
-    public double getCost(NodeXY nodeB, int heuristic){
+    public double getCost(NodeXY nodeB, Heuristic heuristic){
         //Get the cost from one node to another according to a heuristic
         
         //Initialize variables
@@ -56,11 +56,11 @@ public class HeuristicsNode extends NodeXY {
         
         //Select heuristic
         switch (heuristic) {
-            case 1:
+            case FEWEST_LINKS:
                 //Fewest Links
                 cost = 1;
                 break;
-            case 2:
+            case SHORTEST_DISTANCE:
                 //Shortest Distance - measure the distance between nodes using D = sqrt( (x2-x1)squared + (y2-y1)squared )
                 double totalDistance = 0;
                 
@@ -102,17 +102,17 @@ public class HeuristicsNode extends NodeXY {
      * @return estimated cost to goal
      */
     @Override
-    public double getEstimatedCostToGoal(NodeXY goalNode, int heuristic) {
+    public double getEstimatedCostToGoal(NodeXY goalNode, Heuristic heuristic) {
         //Initialize variable for cost
         double estCost = 0;
         
         //Select which heuristic to use
         switch(heuristic) {
-            case 1:
+            case FEWEST_LINKS:
                 //Fewest Links Heuristic
                 estCost = 1; //It is known that 1 will definitely be an underestimate, so 1 is used
                 break;
-            case 2:
+            case SHORTEST_DISTANCE:
                 //Shortest Distance                
                 estCost = this.getCost(goalNode, heuristic); //Uses the other function to calculate distance between nodes,
                 //since the direct distance from this node to the goal is an underestimate of the total distance to the goal

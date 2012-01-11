@@ -39,7 +39,7 @@ public class mainWindowAstar extends javax.swing.JFrame {
     public SearchSpace localSearchSpace = new SearchSpace();
     public HeuristicsNode localStartNode;  //Start node for search algorithm
     public HeuristicsNode localGoalNode;  //Goal node for search algorithm
-    public int selectedHeuristic = 1;//Variable that holds which heuristic is selected by the user (1 = Fewest # of links, 2 = Shortest distance).  1 is the default
+    public Heuristic selectedHeuristic = Heuristic.FEWEST_LINKS;  //Variable that holds which heuristic is selected by the user (e.g., Fewest # of links, Shortest distance).  Fewest links is default.
     //*** Variables used to graphically display the nodes and search space ***
     //MapDisplay to show a map of the nodes in the GUI
     public MapDisplay map;
@@ -539,31 +539,31 @@ public class mainWindowAstar extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
-     * Set the selected heuristic to 2 = Shortest distance when the user selects
+     * Set the selected heuristic to Shortest distance when the user selects
      * this radiobutton
      *
      * @param evt
      */
     private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
 
-        this.selectedHeuristic = 2;
+        this.selectedHeuristic = Heuristic.SHORTEST_DISTANCE;
 
-        //this.printToLog("Heuristic " + this.selectedHeuristic + " - 'Shortest Distance' has been selected");
+        this.printToLog("Heuristic " + this.selectedHeuristic + " - 'Shortest Distance' has been selected");
     }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     private void jTextArea2PropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jTextArea2PropertyChange
     }//GEN-LAST:event_jTextArea2PropertyChange
     /**
-     * Set the selected heuristic to 1 = Fewest links when the user selects this
-     * radiobutton
+     * Set the selected heuristic to Fewest links when the user selects this
+     * radio button
      *
      * @param evt
      */
     private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
 
-        this.selectedHeuristic = 1;
+        this.selectedHeuristic = Heuristic.FEWEST_LINKS;
 
-        //this.printToLog("Heuristic " + this.selectedHeuristic + " - 'Fewest Links' has been selected");
+        this.printToLog("Heuristic " + this.selectedHeuristic + " - 'Fewest Links' has been selected");
     }//GEN-LAST:event_jRadioButton1ActionPerformed
     /**
      * Load files and create nodes and fills their properties

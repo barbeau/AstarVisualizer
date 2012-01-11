@@ -81,7 +81,7 @@ public class AstarSearch extends Thread
     private HeuristicsNode startNode;  //Start node for search algorithm
     private HeuristicsNode goalNode;  //Goal node for search algorithm
     private HeuristicsNode currentNode = null; //Current node being examined
-    private int heuristic = 1;  //Selected Heuristic to use to measure cost.  Default: 1 = Fewest Links, 2 = Shortest Distance
+    private Heuristic heuristic = Heuristic.FEWEST_LINKS;  //Selected Heuristic to use to measure cost.  Default = Fewest Links
     private LinkedList path = new LinkedList(); //Variable that holds the path if the goal node is found   
     private int numIterations = 0; //Counter to count the iterations of algorithm
     //Variables to show text to the user in the main interface
@@ -106,7 +106,7 @@ public class AstarSearch extends Thread
      * @param textLog log to print output to
      * @param map map to display search output on
      */
-    public AstarSearch(SearchSpace searchSpace, HeuristicsNode startNode, HeuristicsNode goalNode, int heuristic, javax.swing.JTextArea text_log, MapDisplay map)
+    public AstarSearch(SearchSpace searchSpace, HeuristicsNode startNode, HeuristicsNode goalNode, Heuristic heuristic, javax.swing.JTextArea text_log, MapDisplay map)
     {
        super();
        //Initialize search variables
@@ -182,11 +182,11 @@ public class AstarSearch extends Thread
         try {
             //Print Heuristic that is being used
             switch(this.heuristic) {
-                case 1:
+                case FEWEST_LINKS:
                     //Fewest Links
                     this.printToLog("The 'Fewest Links' Heuristic is being used.");
                     break;
-                case 2:
+                case SHORTEST_DISTANCE:
                     //Shortest Distance
                     this.printToLog("The 'Shortest Distance' Heuristic is being used.");
                     break;

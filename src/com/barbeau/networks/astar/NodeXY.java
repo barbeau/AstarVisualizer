@@ -199,9 +199,9 @@ public abstract class NodeXY extends Node implements Comparable {
     //**************************************************************************************
     
     //This function gets the real cost betweeen this node and node_B
-    public abstract double getCost(NodeXY node_B, int heuristic);
+    public abstract double getCost(NodeXY node_B, Heuristic heuristic);
     
     //This function gets the estimated cost between this ndoe and the goal node
-    public abstract double getEstimatedCostToGoal(NodeXY goal_node, int heuristic);
+    public abstract double getEstimatedCostToGoal(NodeXY goal_node, Heuristic heuristic);
         
 }
