@@ -35,8 +35,8 @@ The output from the algorithm (path from start to goal node) should be shown in 
 Start and goal nodes are shown in blue, current node being processed is in green, and any disabled nodes are red.
 Links are shown as light blue if they are traveled, and as dark blue if they are part of the path after the algorithm finds a path.
 
-To add more heuristics, modify the "getCost(Node nodeB, int heuristic)" and "getEstimatedCostToGoal(Node goal_node, int heuristic)" functions in the class "HeuristicsNode" to add a new heuristic calculation as part of the 'switch' statement.
-Then pass the integer used for that 'switch' statement into the "heuristic" argument of the AstarSearch object when it is created. 
+To add more heuristics, add a new enumeration value to the Heuristic enumeration, and modify the "getCost(Node nodeB, Heuristic heuristic)" and "getEstimatedCostToGoal(Node goal_node, Heuristic heuristic)" functions in the class "HeuristicsNode" to add a new heuristic calculation as part of the 'switch' statement.
+Then pass the Heuristic enumeration value used for that 'switch' statement into the "Heuristic" argument of the AstarSearch object when it is created. 
 
 References used for A* algorithm:
 Russel, Norvig.  "Artificial Intelligence:  A Modern Approach".  Prentice Hall 2003.
