@@ -57,3 +57,7 @@ in the class `HeuristicsNode` to add a new heuristic calculation as part of the 
 9. Sun Microsystems.  "How to Use File Choosers", available online at http://java.sun.com/docs/books/tutorial/uiswing/components/filechooser.html.
 10. Sun Microsystems.  "Maintaining a Priority Queue and Displaying Text in Multiple Styles", available online at http://java.sun.com/developer/JDCTechTips/2002/tt0821.html.
 11. Sun Microsystems.  "Java Forums - Drawing arrows", available online at http://forum.java.sun.com/thread.jspa?threadID=378460&tstart=135.
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/barbeau/astarvisualizer/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
